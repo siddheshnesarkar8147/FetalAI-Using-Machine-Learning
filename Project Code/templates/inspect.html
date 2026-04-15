@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Information</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: 500;
+            color: #333;
+        }
+        .value {
+            color: #667eea;
+        }
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        li {
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Model Information</h1>
+
+        <div class="info-section">
+            <div class="section-title">🎯 Model Details</div>
+            <div class="info-item">
+                <span class="label">Model Type:</span>
+                <span class="value">Random Forest Classifier</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Task:</span>
+                <span class="value">Fetal Health Classification</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Classes:</span>
+                <span class="value">3 (Normal, Suspect, Pathological)</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Input Features:</span>
+                <span class="value">21 Cardiotocogram Features</span>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="section-title">📈 Features Used</div>
+            <ul>
+                <li><strong>Baseline & Movement:</strong> Baseline value, Accelerations, Fetal movement, Uterine contractions</li>
+                <li><strong>Decelerations:</strong> Light, Severe, and Prolongued decelerations</li>
+                <li><strong>Variability:</strong> Abnormal short-term, Mean short-term, Abnormal long-term percentage, Mean long-term</li>
+                <li><strong>Histogram:</strong> Width, Min, Max, Peaks, Zeroes, Mode, Mean, Median, Variance, Tendency</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <div class="section-title">🏥 Prediction Classes</div>
+            <div class="info-item">
+                <span class="label">Class 1:</span>
+                <span class="value">✅ NORMAL - Healthy fetal condition</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Class 2:</span>
+                <span class="value">⚠️ SUSPECT - Requires further evaluation</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Class 3:</span>
+                <span class="value">❌ PATHOLOGICAL - Serious abnormalities detected</span>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="section-title">💡 How It Works</div>
+            <ul>
+                <li>Enter cardiotocogram (CTG) measurements from fetal monitoring</li>
+                <li>The model analyzes the input features using machine learning</li>
+                <li>Outputs a classification with confidence score</li>
+                <li>Results should be used as a decision support tool alongside clinical judgment</li>
+            </ul>
+        </div>
+
+        <a href="/" class="back-button">← Back to Prediction</a>
+    </div>
+</body>
+</html>
